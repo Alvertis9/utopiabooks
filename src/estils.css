@@ -561,16 +561,13 @@ img.portada {
 
 @keyframes animation {
     0% {
-        transform: scale(1);
-        opacity: 1;
+        background-color: red;
     }
-    50% {
-        transform: scale(0);
-        opacity: 0;
+    75% {
+        background-color: var(--oppo);
     }
     100% {
-        transform: scale(1);
-        opacity: 1;
+        background-color: var(--fosc);
     }
 }
 
@@ -596,7 +593,7 @@ img.portada {
 
 :hover.fletxaEsq,
 :hover.fletxaDreta {
-    animation: 2s animation infinite;
+    animation: 5s animation infinite;
 }
 
 /* Pàgines d'estil Breakpoints */
