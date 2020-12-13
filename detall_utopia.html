@@ -51,21 +51,37 @@
             </nav>
         </aside>
         <script async src="src/llibreries.js"></script>
+
         <!-- Part central -->
         <main class="container">
             <h2>Utopía</h2>
             <div class="detall_llibre">
-                <img src="./img/utopia.jpg" alt="" class="portada" />
-                <div class="fitxa">
-                    <div class="dades"></div>
-                    <dl>
+                <img src="./img/utopia_small.jpg" alt="" class="detallportada" />
+                <div class="foto_text">
+                    <picture class="autor">
+                        <source
+                            media="(max-width: 767px)"
+                            sizes="(max-width: 767px)"
+                            srcset="img/tomas_moro_small.jpg"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            sizes="(minx-width: 768px)"
+                            srcset="img/tomas_moro_full.jpg"
+                        />
+
+                        <img src="img/tomas_moro_small.jpg" alt="" />
+                    </picture>
+
+                    <dl class="llistallibre">
                         <dt>Datos de la obra</dt>
                         <dd>Tomás Moro</dd>
-                        <dd>Regne Unit</dd>
+                        <dd>Reino Unido</dd>
                         <dd><time datetime="1516">1516</time></dd>
                     </dl>
                 </div>
             </div>
+
             <div class="abstracte">
                 <h4>Sociedad ideal y Estado ideal</h4>
                 <blockquote>
@@ -93,7 +109,7 @@
                     <figure>
                         <img
                             class="segona_img"
-                            src="img/utopia_primera.png"
+                            src="img/utopiaprimera_small.jpg"
                             alt="Ilustración de la primera edición. 1516."
                         />
                         <figcaption>
@@ -145,38 +161,65 @@
 
         <!-- Footer -->
         <footer>
-            <!-- Enllaços corp -->
-            <ul class="corp">
-                <li><a href="">Sobre nosotros</a></li>
-                <li><a href="">Aviso legal</a></li>
-                <li><a href="">Política de privacidad</a></li>
-            </ul>
-            <!--Enllaços XXSS -->
-            <ul class="xxss">
-                <li><a href="" target="_blank">Facebook</a></li>
-                <li><a href="" target="_blank">Twitter</a></li>
-                <li><a href="" target="_blank">Youtube</a></li>
-            </ul>
-            <!-- Crèdits -->
-            <ul class="credits">
-                <li>&copy; <time datetime="2020">2020</time> Albert Bosch Acedo</li>
+            <!-- Clip-path -->
+            <div class="logoinf">
+                <div class="brand">
+                    <a href="index.html"><img src="img/logo.svg" alt="" /></a>
+                    <a href="index.html"><h2 class=".h1">utopia books</h2></a>
+                </div>
 
-                <li>
-                    Imágenes
-                    <a href="https://www.unsplash.com" target="_blank">unsplash.com </a> i
-                    <a href="https://www.wikipedia.com" target="_blank">wikipedia.com </a>
-                </li>
-                <li>
-                    Textos
-                    <a
-                        href="https://mmarglezgomez.com/los-7-subgeneros-imprescindibles-de-la-ciencia-ficcion/"
-                        target="_blank"
-                        >mmarglezgomez.com
-                    </a>
-                </li>
-            </ul>
-            <!-- Tornar -->
-            <a class="fletxa" href="#top">&#9650;</a>
+                <svg version="1.2" width="70" height="100">
+                    <defs>
+                        <clipPath id="cortina">
+                            <circle cx="50vw" cy="10" r="1200">
+                                <animate
+                                    attributeName="r"
+                                    attributeType="XML"
+                                    from="0"
+                                    to="100vw"
+                                    begin="0s"
+                                    dur="10s"
+                                    fill="freeze"
+                                    repeatCount="1"
+                                />
+                            </circle>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="pro">
+                <!-- Enllaços corp -->
+                <ul class="corp">
+                    <li><a href="">Sobre nosotros</a></li>
+                    <li><a href="">Aviso legal</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                </ul>
+                <!--Enllaços XXSS -->
+                <ul class="xxss">
+                    <li><a href="" target="_blank">Facebook</a></li>
+                    <li><a href="" target="_blank">Twitter</a></li>
+                    <li><a href="" target="_blank">Youtube</a></li>
+                </ul>
+                <!-- Crèdits -->
+                <ul class="credits">
+                    <li>&copy; <time datetime="2020">2020</time> Albert Bosch Acedo</li>
+
+                    <li>
+                        Imágenes
+                        <a href="https://www.unsplash.com" target="_blank">unsplash.com </a>
+                    </li>
+                    <li>
+                        Textos
+                        <a
+                            href="https://mmarglezgomez.com/los-7-subgeneros-imprescindibles-de-la-ciencia-ficcion/"
+                            target="_blank"
+                            >mmarglezgomez.com
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tornar -->
+                <a class="fletxa" href="#top">&#9650;</a>
+            </div>
         </footer>
     </body>
 </html>

@@ -1,0 +1,35 @@
+Revisió PAC1:
+
+Sense tenir molt temps, i un cop llegida i trastejada la documentació del mòdul 3, ens hem posat a treballar en la segona entrega.
+
+Primer hem repassat els comentaris de la primera PAC. S'ha modificat el .browserlistrc passant a:
+    last 2 version
+    > 0.5%
+    not dead
+    IE 11
+
+Un cop fet això, hem reestructurat les carpetes del projecte. Per error ho hem borrat tot, però s'ha pogut recuperar del github. 
+
+S'ha instal·lat la nova dependencia de imagemin correctament (seguint les indicacions del fòrum). S'ha fet la prova que es comenta al mòdul i, les imatges obtingudes amb el npm run builder, pesen bastant menys que les originals. 
+-----------------------------
+Animació amb clip-path:
+
+Per incloure l'animació amb el clip-path hem optat per una animació senzilla, però que quedes correctament integrada. S'ha afegit un div amb una imatge de  fons: 
+
+Photo by Ed Robertson https://unsplash.com/@eddrobertson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+
+i s'hi sobreposa l'estructura que tenim de logo + nom. L'animació consisteix en un cercle obrint-se i es queda congelat per veure tot un cop a finalitzat l'animació.
+-----------------------------
+Pàgines de detall:
+
+Al tractar-se d'una web de llibres, s'ha optat per que totes les imatges siguin format .jpg, exceptuant el logo (SVG). El format .jpg en permet una bona compressió d'imatges i al no haver de fer manipualcions, no ens fa falta recórrer a altres formats més pesats.
+
+Per utilitzar les imatges correctament responsives i utilitzar-les en la mida adient, les hem definit en tres mides (small: 270px - mid: 445px - full: 600px). Només hi ha una excepció: el fons de l'animació té full1200 per tenir tot l'ample sense perdre qualitat.
+
+Utilitzem l'etiqueta <picture> per poder treballar amb srcset i escollir, en funció de les necessitat, quina és la imatge de menor pes sense afectar la qualitat. 
+
+Pel que fa a la direcció d'art, s'ha treballat amb la part superior de les pàgines de detall. A mesura que hi tenim més espai, incorporem la foto del autor i en reordenem elements. Quan ja estem en formats superiors als 768px s'escull una foto allargada de l'autor.
+----------------------------
+Keyframes:
+
+S'ha afegit una petita animació mitjançant @keyframes a les fletxes de pasar pàgina. És una animació molt bàsica que fa aparèixer i desaparèixer les fletxes.

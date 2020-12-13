@@ -86,7 +86,7 @@
                     <!-- Bloc del link al llibre Utopia -->
                     <a href="detall_utopia.html"
                         ><div class="llibres">
-                            <img src="./img/utopia.jpg" alt="" class="portada" />
+                            <img src="./img/utopia_small.jpg" alt="" class="portada" />
 
                             <ul class="combo">
                                 <li class="textEscrit">Utopía</li>
@@ -135,7 +135,7 @@
                     <!-- Bloc del link al llibre 1984 -->
                     <a href="detall_1984.html"
                         ><div class="llibres">
-                            <img src="./img/1984first.jpg" alt="" class="portada" />
+                            <img src="./img/1984first_small.jpg" alt="" class="portada" />
 
                             <ul class="combo">
                                 <li class="textEscrit">1984</li>
@@ -202,7 +202,7 @@
                     <!-- Bloc del link al llibre high Castle -->
                     <a href=""
                         ><div class="llibres">
-                            <img src="./img/high_castle.jpg" alt="" class="portada" />
+                            <img src="./img/high_castle_small.jpg" alt="" class="portada" />
 
                             <ul class="combo">
                                 <li class="textEscrit">The Man in the High Castle</li>
@@ -255,38 +255,65 @@
 
         <!-- Footer -->
         <footer>
-            <!-- Enllaços corp -->
-            <ul class="corp">
-                <li><a href="">Sobre nosotros</a></li>
-                <li><a href="">Aviso legal</a></li>
-                <li><a href="">Política de privacidad</a></li>
-            </ul>
-            <!--Enllaços XXSS -->
-            <ul class="xxss">
-                <li><a href="" target="_blank">Facebook</a></li>
-                <li><a href="" target="_blank">Twitter</a></li>
-                <li><a href="" target="_blank">Youtube</a></li>
-            </ul>
-            <!-- Crèdits -->
-            <ul class="credits">
-                <li>&copy; <time datetime="2020">2020</time> Albert Bosch Acedo</li>
+            <!-- Clip-path -->
+            <div class="logoinf">
+                <div class="brand">
+                    <a href="index.html"><img src="img/logo.svg" alt="" /></a>
+                    <a href="index.html"><h2 class=".h1">utopia books</h2></a>
+                </div>
 
-                <li>
-                    Imágenes
-                    <a href="https://www.unsplash.com" target="_blank">unsplash.com </a> i
-                    <a href="https://www.wikipedia.com" target="_blank">wikipedia.com </a>
-                </li>
-                <li>
-                    Textos
-                    <a
-                        href="https://mmarglezgomez.com/los-7-subgeneros-imprescindibles-de-la-ciencia-ficcion/"
-                        target="_blank"
-                        >mmarglezgomez.com
-                    </a>
-                </li>
-            </ul>
-            <!-- Tornar -->
-            <a class="fletxa" href="#top">&#9650;</a>
+                <svg version="1.2" width="70" height="100">
+                    <defs>
+                        <clipPath id="cortina">
+                            <circle cx="50vw" cy="10" r="1200">
+                                <animate
+                                    attributeName="r"
+                                    attributeType="XML"
+                                    from="0"
+                                    to="100vw"
+                                    begin="0s"
+                                    dur="10s"
+                                    fill="freeze"
+                                    repeatCount="1"
+                                />
+                            </circle>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="pro">
+                <!-- Enllaços corp -->
+                <ul class="corp">
+                    <li><a href="">Sobre nosotros</a></li>
+                    <li><a href="">Aviso legal</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                </ul>
+                <!--Enllaços XXSS -->
+                <ul class="xxss">
+                    <li><a href="" target="_blank">Facebook</a></li>
+                    <li><a href="" target="_blank">Twitter</a></li>
+                    <li><a href="" target="_blank">Youtube</a></li>
+                </ul>
+                <!-- Crèdits -->
+                <ul class="credits">
+                    <li>&copy; <time datetime="2020">2020</time> Albert Bosch Acedo</li>
+
+                    <li>
+                        Imágenes
+                        <a href="https://www.unsplash.com" target="_blank">unsplash.com </a>
+                    </li>
+                    <li>
+                        Textos
+                        <a
+                            href="https://mmarglezgomez.com/los-7-subgeneros-imprescindibles-de-la-ciencia-ficcion/"
+                            target="_blank"
+                            >mmarglezgomez.com
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tornar -->
+                <a class="fletxa" href="#top">&#9650;</a>
+            </div>
         </footer>
     </body>
 </html>

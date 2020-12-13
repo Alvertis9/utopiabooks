@@ -216,6 +216,20 @@ footer {
     color: var(--gold);
 }
 
+.logoinf {
+    background-image: url(/img/fons_llibres_mid.jpg);
+    background-size: cover;
+    height: 100px;
+    display: block;
+    -webkit-clip-path: url(#cortina);
+    clip-path: url(#cortina);
+    margin-left: 0;
+}
+
+.logoinf h2 {
+    margin-top: 1.2rem;
+}
+
 footer ul {
     padding-top: 1.5rem;
     text-align: center;
@@ -236,8 +250,12 @@ footer a {
 }
 
 /* Footer Breakpoints */
-@media (min-width: 576px) {
-    footer {
+@media (min-width: 768px) {
+    .logoinf {
+        background-image: url(/img/fons_llibres_full_1200.jpg);
+    }
+
+    footer .pro {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
@@ -396,7 +414,7 @@ h2.nuestrosmundos {
 }
 
 /* Index Breakpoints */
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     .grid1 {
         grid-template-columns: 1fr 1fr;
     }
@@ -405,7 +423,7 @@ h2.nuestrosmundos {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .bloc1 {
         display: inline;
         width: 60%;
@@ -541,6 +559,21 @@ img.portada {
     color: var(--link);
 }
 
+@keyframes animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .fletxesText {
     font-size: 1.5rem;
     display: grid;
@@ -563,8 +596,7 @@ img.portada {
 
 :hover.fletxaEsq,
 :hover.fletxaDreta {
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--oppo));
-    font-weight: 700;
+    animation: 2s animation infinite;
 }
 
 /* Pàgines d'estil Breakpoints */
@@ -589,25 +621,43 @@ img.portada {
 
 /* Detall llibres */
 .detall_llibre {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
-.fitxa {
-    margin-top: 0.5rem;
+.detallportada {
+    margin-right: 1rem;
+    width: 33vw;
 }
 
-.fitxa dl {
+picture.autor {
+    display: none;
+}
+
+.autor img {
+    border-radius: 10rem;
+}
+
+.llistallibre dt {
     font-family: 'Special Elite', serif;
-}
-.fitxa dt {
+    color: var(--gold);
     font-weight: 700;
-    text-align: center;
+    text-align: Left;
     padding-bottom: 0.5rem;
+}
+
+.llistallibre dl {
+    padding-bottom: 1.5rem;
+}
+
+.llistallibre dd {
+    font-family: 'Special Elite', serif;
+    font-weight: 400;
+    text-align: Left;
 }
 
 figure {
     display: flex;
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--oppo));
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     padding-bottom: 2rem;
@@ -617,7 +667,6 @@ figure {
 
 figure.img_full {
     display: block;
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--oppo));
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     padding-bottom: 1rem;
@@ -626,25 +675,20 @@ figure.img_full {
 }
 .segona_img {
     display: block;
-
     font-size: 0.7rem;
-    height: 15rem;
+    width: 35vw;
     margin-left: 0.5rem;
 }
 
-.segona_full_img {
+.segona_img_full {
     display: block;
-    font-size: 0.7rem;
-    width: 90%;
-    max-width: 600px;
+    width: 65vw;
     margin: auto;
 }
 
 figcaption {
     font-style: italic;
     text-align: justify;
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
     padding-left: 0.5rem;
 }
 
@@ -671,8 +715,81 @@ figcaption p:nth-of-type(2) {
 }
 
 /* Detall llibres Breakpoint  */
+
 @media (min-width: 576px) {
+    .detall_llibre {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    picture.autor {
+        display: block;
+    }
+
+    .autor img {
+        width: 30vw;
+        margin: auto 1rem;
+    }
+
+    .llistallibre {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .detallportada {
+        width: 25vw;
+    }
+    .detall_llibre {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    picture.autor {
+        display: block;
+        border-radius: 10rem;
+    }
+    .autor img {
+        width: 23vw;
+        margin: auto 1rem;
+    }
+
+    .foto_text {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    dl.llistallibre {
+        margin: auto 1rem;
+        font-size: 150%;
+    }
     figcaption p:nth-of-type(2) {
         display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .detallportada {
+        width: 21vw;
+    }
+
+    .detall_llibre {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    picture.autor {
+        display: block;
+        border-radius: 10rem;
+    }
+    .autor img {
+        width: 20vw;
+        margin: auto 1rem;
+        margin-left: 0rem;
+    }
+
+    .foto_text {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    dl.llistallibre {
+        margin: auto 2rem;
+        font-size: 200%;
     }
 }
